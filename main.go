@@ -7,9 +7,6 @@ import (
 	"strings"
 )
 
-const serviceName = "Medium service"
-const serviceDescription = "Simple service, just for fun"
-
 func main() {
 	str := "As you can expect, there is no fixed number of words that a paragraph should have. A rule of thumb: the paragraphs are usually about 100 to 200 words long, which is about 6-8 sentences. Nevertheless, it all depends on the ideas, and ideas come in many sizes. So the paragraph can be long enough to reach its end. But we can’t ignore the fact that readers don’t like seeing blocks of paragraphs. And it’s for that reason you should stick to one concept or idea per paragraph to avoid creating very long paragraphs."
 	result := rangeMap(str, 10)
@@ -30,7 +27,6 @@ func rangeMap(s string, count int) map[string]int {
 			m[word]++
 		}
 	}
-	// fmt.Println(m)
 
 	// Takes max values
 	// counts := make(map[string]int)
@@ -39,7 +35,6 @@ func rangeMap(s string, count int) map[string]int {
 	// 		counts[key] = value
 	// 	}
 	// }
-	// fmt.Println(counts)
 
 	// Sorts By Value
 	keys := make([]string, 0, len(m))
